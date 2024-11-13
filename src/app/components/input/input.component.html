@@ -21,3 +21,11 @@
 } @else {
     <p> No se ha detectado un saludo</p>
 }
+
+<ul>
+  @for(elemento of lista; track elemento.id){
+  <li>
+    <b>nombre:</b> {{elemento.nombre}}
+  </li>
+}
+</ul>

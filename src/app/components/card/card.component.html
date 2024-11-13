@@ -8,6 +8,11 @@
   </mat-card-header>
  <mat-card-content>
     {{longText}}
+    @if(valorDelHijo){
+      <p><b>Valor recibido desde el hijo==>{{valorDelHijo}}</b></p>
+    }
   </mat-card-content>
  </mat-card>
+
+ <app-slider title="Slider hijo del card" (emisor)="onEmit($event)"/>
     
