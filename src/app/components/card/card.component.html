@@ -1,22 +1,15 @@
 <mat-card class="example-card" appearance="outlined">
     <mat-card-header>
      <mat-card-title-group>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Medium</mat-card-subtitle>
-      <img mat-card-md-image [src]="imgUrl" alt="Image of a Shiba Inu">
+      <mat-card-title>The Rick and Morty Api</mat-card-title>
+      <mat-card-subtitle>Phone-Person</mat-card-subtitle>
+      <img mat-card-md-image [src]="imgUrl" alt="Image de Rick and morty ">
     </mat-card-title-group>
   </mat-card-header>
  <mat-card-content>
-    {{longText}}
-    @if(valorDelHijo){
-      <p><b>Valor recibido desde el hijo==>{{valorDelHijo}}</b></p>
-    }
-
-    <h4>
-      La hora actual es: {{ reloj | async }}
-    </h4>
+    
     </mat-card-content>
  </mat-card>
 
- <app-slider title="Slider hijo del card" (emisor)="onEmit($event)"/>
+
     
