@@ -3,7 +3,7 @@
      <mat-card-title-group>
       <mat-card-title>Shiba Inu</mat-card-title>
       <mat-card-subtitle>Medium</mat-card-subtitle>
-      <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Image of a Shiba Inu">
+      <img mat-card-md-image [src]="imgUrl" alt="Image of a Shiba Inu">
     </mat-card-title-group>
   </mat-card-header>
  <mat-card-content>
@@ -11,7 +11,11 @@
     @if(valorDelHijo){
       <p><b>Valor recibido desde el hijo==>{{valorDelHijo}}</b></p>
     }
-  </mat-card-content>
+
+    <h4>
+      La hora actual es: {{ reloj | async }}
+    </h4>
+    </mat-card-content>
  </mat-card>
 
  <app-slider title="Slider hijo del card" (emisor)="onEmit($event)"/>

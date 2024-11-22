@@ -1,19 +1,25 @@
 import { Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { MaterialModule } from '../../material/material.module';
 import { SliderComponent } from '../slider/slider.component';
+import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { ObservableService } from '../../services/observable.service';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [MaterialModule,SliderComponent],
+  imports: [MaterialModule,SliderComponent,CommonModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
 export class CardComponent implements OnInit, OnChanges, OnDestroy, DoCheck {
   contador=0;
-
-  constructor(){
-    console.log('constructor');
+  reloj:Observable<string>
+  constructor(
+    private observableService:ObservableService
+  ){
+    this.reloj=this.observableService.time;
+    
     }
   ngOnChanges(changes: SimpleChanges): void {
     this.contador++;

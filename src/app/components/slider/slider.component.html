@@ -1,6 +1,12 @@
-<h4><b>{{title}}</b></h4>
+<h3><b>{{title}}</b></h3>
 
 <mat-slider >
     <input matSliderThumb [(ngModel)]="value" (valueChange)="cambioSlider($event)">
     </mat-slider>
     Valor= {{value}}
+    <h4>
+
+        La hora actual es: {{ reloj | async }}
+    
+    </h4>
+    

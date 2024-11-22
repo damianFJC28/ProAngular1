@@ -15,6 +15,18 @@ export const routes: Routes = [
     {
         path:'input',
         loadComponent: () => import('./components/input/input.component').then(m => m.InputComponent)
+    },
+
+    {
+        path:'observable',
+        loadComponent: () => import('./components/observable/observable.component').then(m => m.ObservableComponent)
+    },
+
+    {
+        path:'form',
+        loadComponent: () => import('./components/formulario/formulario.component').then(m => m.FormularioComponent)
     }
+
+
 ];
 
