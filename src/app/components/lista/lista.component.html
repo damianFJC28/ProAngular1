@@ -1,0 +1,25 @@
+@for(personaje of listaPersonajes; track $index){
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+     <mat-card-title-group>
+      <mat-card-title>{{personaje.name}}</mat-card-title>
+      <mat-card-subtitle>{{personaje.status}}</mat-card-subtitle>
+      <img mat-card-md-image [src]="personaje.image">
+    </mat-card-title-group>
+  </mat-card-header>
+ <mat-card-content>
+    genero:{{personaje.gender}}
+</mat-card-content>
+
+<mat-card-content>
+    especie:{{personaje.species}}
+</mat-card-content>
+
+<mat-card-content>
+ tipo:{{personaje.type}}
+</mat-card-content>
+
+
+
+</mat-card>
+}

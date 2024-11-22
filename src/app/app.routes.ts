@@ -25,6 +25,11 @@ export const routes: Routes = [
     {
         path:'form',
         loadComponent: () => import('./components/formulario/formulario.component').then(m => m.FormularioComponent)
+    },
+
+    {
+        path:'lista',
+        loadComponent: () => import('./components/lista/lista.component').then(m => m.ListaComponent)
     }
 
 
